@@ -1,0 +1,109 @@
+.use-cases {
+    padding: 50px 0;
+    background-color: white;
+  }
+  
+  .use-cases h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: black;
+    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+  }
+  
+  .use-case-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .use-case-card {
+    width: 250px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 20px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+  }
+  
+  .use-case-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #7F73EB, #5d4fe3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+  }
+  
+  .use-case-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 30px rgba(127, 115, 235, 0.3);
+  }
+  
+  .use-case-card:hover::before {
+    opacity: 0.8;
+  }
+  
+  .use-case-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .use-case-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .use-case-card h3 {
+    font-size: 1.2em;
+    padding: 15px;
+    margin: 0;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  .use-case-card p {
+    font-size: 0.9em;
+    padding: 0 15px 15px;
+    color: #cccccc;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  .use-case-card:hover h3,
+  .use-case-card:hover p {
+    color: #ffffff;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .use-case-card {
+    animation: fadeInUp 0.8s ease-out backwards;
+  }
+  
+  /* Staggered animation for cards */
+  .use-case-card:nth-child(1) { animation-delay: 0.1s; }
+  .use-case-card:nth-child(2) { animation-delay: 0.3s; }
+  .use-case-card:nth-child(3) { animation-delay: 0.5s; }
+  .use-case-card:nth-child(4) { animation-delay: 0.7s; }
