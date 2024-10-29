@@ -1,0 +1,68 @@
+<section class="hero-section d-flex justify-content-center align-items-center">
+    <div class="moving-background">
+        <div *ngFor="let row of backgroundImages" class="image-row">
+          <div *ngFor="let image of row" class="image-card">
+            <img [src]="image" alt="Background image">
+          </div>
+        </div>
+      </div>
+    
+    <div class="section-overlay"></div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                <div class="hero-section-text mt-5">
+                     <h6 class="text-white">Free Online AI Image Generator    </h6>
+
+                    <h1 class="hero-title text-white mt-4 mb-4">Transform ideas into images
+                        <br> 
+                        Find the perfect graphic for any project
+                        </h1>
+
+                    <a href="#categories-section" class="custom-btn custom-border-btn btn">Browse Categories</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <form class="custom-form hero-form" action="#" method="get" role="form">
+                    <h3 class="text-white mb-3">Create Stunning AI Generated Images
+
+                    </h3>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="input-group" style="width: 208%;">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-dice"></i></span>
+
+                                <input type="text" name="job-title" id="job-title" class="form-control" placeholder="Describe the image you want to genrate" required>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <button type="submit" class="form-control">
+                                Genrate Image
+                            </button>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-flex flex-wrap align-items-center mt-4 mt-lg-0">
+                                <span class="text-white mb-lg-0 mb-md-0 me-2">Popular:</span>
+
+                                <div>
+                                    <a href="job-listings.html" class="badge">Anime</a>
+
+                                    <a href="job-listings.html" class="badge">Real Photos </a>
+
+                                    <a href="job-listings.html" class="badge">Filmic</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

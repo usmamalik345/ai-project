@@ -1,0 +1,180 @@
+:root {
+    --font-size: 0.8rem;
+    --title-font-size: 1.4rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(to left, #58595f, #2e3035);
+    display: flex;
+    width: 100%;
+    max-width: 1800px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.wraper {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    background: #2f3136;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+}
+
+.signup-container__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.image--container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.signup-container__title {
+    color: white;
+    font-size: var(--title-font-size);
+    font-weight: bolder;
+    text-align: center;
+    padding: 0.3rem;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.signup-form__input {
+    margin-bottom: 1.5rem;
+}
+
+.signup-form__input label {
+    text-transform: uppercase;
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: rgb(155, 152, 152);
+}
+
+.signup-form__input input {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1.2px solid #202225;
+    background: #393c42;
+    color: #ccc;
+    padding: 0.5rem;
+    transition: all 0.3s ease; 
+
+}
+
+.signup-form__input input:hover {
+    border: 1.2px solid black;
+}
+
+.signup-form__input input:focus {
+    border: 1.6px solid #7289da;
+    transform: scale(1.02); /* Slight scale up on focus */
+    box-shadow: 0 0 8px rgba(114, 137, 218, 0.5); /* Add a subtle glow effect */
+}
+
+.signup-form__button {
+    margin-top: 2rem;
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 4px;
+    background: #7289da;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease; 
+
+}
+
+.signup-form__button:hover {
+    cursor: pointer;
+    background: #5b77dd;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.existing-user__sign-in {
+    color: rgb(155, 152, 152);
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.signup-form__button:active {
+    transform: translateY(0); /* Return to original position when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow when clicked */
+}
+.existing-user__sign-in a {
+    text-decoration: none;
+    color: #5670ce;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .wraper {
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .image--container {
+        width: 50%;
+        height: auto;
+    }
+
+    .signup-container__main {
+        width: 50%;
+        padding-left: 3rem;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-form__input,
+.signup-form__button {
+    animation: fadeIn 0.5s ease-out;
+}

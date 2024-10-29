@@ -1,0 +1,209 @@
+:root {
+    --font-size: 0.8rem;
+    --title-font-size: 1.4rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(to left, #58595f, #2e3035);
+    display: flex;
+    width: 100%;
+    max-width: 1800px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.wraper {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    background: #2f3136;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+}
+
+.login-container__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.image--container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.login-container__title {
+    color: white;
+    font-size: var(--title-font-size);
+    font-weight: bolder;
+    text-align: center;
+    padding: 0.3rem;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form__input-email input,
+.login-form__input-password input {
+    transition: all 0.3s ease;
+}
+
+.login-form__input-email label,
+.login-form__input-password label {
+    text-transform: uppercase;
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: rgb(155, 152, 152);
+}
+
+.login-form__input-email input,
+.login-form__input-password input {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1.2px solid #202225;
+    background: #393c42;
+    color: #ccc;
+    padding: 0.5rem;
+    
+}
+
+.login-form__input-email input:hover,
+.login-form__input-password input:hover {
+    border: 1.2px solid black;
+}
+
+.login-form__input-email input:focus,
+.login-form__input-password input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 8px rgba(114, 137, 218, 0.5);
+}
+
+.forgot-password {
+    margin-top: 0.6rem;
+    text-align: right;
+}
+
+.forgot-password a {
+    color: #7289da;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.login-form__button {
+    transition: all 0.3s ease;
+
+    margin-top: 2rem;
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 4px;
+    background: #7289da;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.login-form__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: #5b77dd;
+}
+.login-form__button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.newuser__sign-in {
+    color: rgb(155, 152, 152);
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.newuser__sign-in a {
+    text-decoration: none;
+    color: #5670ce;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .wraper {
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .image--container {
+        width: 50%;
+        height: auto;
+    }
+
+    .login-container__main {
+        width: 50%;
+        padding-left: 3rem;
+    }
+}
+.giphy-embed-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.giphy-embed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 0;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-form__input-email,
+.login-form__input-password,
+.login-form__button {
+    animation: fadeIn 0.5s ease-out;
+}
