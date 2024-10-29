@@ -5,10 +5,7 @@ import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent }, // Default route
-
-  
-
-
+  { path: 'home', component: HomeComponent }, 
 ];
 
 @NgModule({
